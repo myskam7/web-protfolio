@@ -11,11 +11,15 @@ body {
 /*NAVBAR*/
 .navbar {
   background-color: #31b0d5;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-  display: flex;
+  /* Set the navbar to fixed position */
+  position: fixed;
+  /* Position the navbar at the top of the page */
+  top: 0; 
+  /* Full width */
+  width: 100%;
+  /* display: flex; */
   justify-content: center;
+  z-index: 1; 
 }
 
 .navbar a {
