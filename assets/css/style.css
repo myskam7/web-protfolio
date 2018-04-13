@@ -85,7 +85,7 @@ color: #fff;
 }
 
 .jumbotron-text h1 {
-  /*YOUR NAME*/
+  /*Mario Mazza*/
   text-transform: uppercase;
   font-weight: 800;
   font-size: 3em;
@@ -143,6 +143,11 @@ color: #fff;
 
 .side-content {
   flex: 0 0 16.6%;
+}
+
+.side-content>h4{
+  font-weight: 200;
+  color: #fff;
 }
 
 .main-content {
@@ -203,11 +208,11 @@ h2 {
   flex: 1 1 auto;
 }
 
-h4 {
+/* h4 {
   margin: 0;
   font-weight: 400;
   color: grey;
-}
+} */
 
 .job-title {
   float: right;
@@ -305,4 +310,48 @@ h4 {
 
 .white-text {
   color: white;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 600px) {
+  
+  .side-content-sm {
+    /* flex: 0 0 0; */
+    flex: auto;
+  }
+
+  .side-content {
+    flex: auto;
+  }
+
+
+/* THIS WORKS ON THE IMG'S ON THE PROJECT SECTION */
+ .project-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2,1fr);
+}
+.project-image {
+  display: flex;
+  /* flex: 1 0 auto; */
+}
+
+.project-image img {
+  flex:auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 }
