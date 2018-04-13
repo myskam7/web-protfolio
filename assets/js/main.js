@@ -25,7 +25,7 @@ $('.jumbo-Container').animateCss('flipInX', function () {
 
 // SCROLLS DOWN ON BUTTON LICK────────────────────────────────────────────────────
 
-  $("#nav-home").click(function () {
+  $(".nav-home").click(function () {
     scrollToHome()
   })
 
@@ -55,6 +55,10 @@ $('.jumbo-Container').animateCss('flipInX', function () {
 
   $("#nav-con").click(function () {
     scrollToSkills()
+  })
+
+  $("#nav-resume").click(function () {
+    scrollToContact()
   })
 
   function scrollToHome() {
@@ -100,13 +104,20 @@ $('.jumbo-Container').animateCss('flipInX', function () {
       'slow');
   }
 
+  function scrollToContact() {
+    $('html,body').animate({
+      scrollTop: $(".contact").offset().top
+    },
+      'slow');
+  }
 
-  // $("#secondArrow").click(function () {
-  //   $('html,body').animate({
-  //     scrollTop: $("#carouselExampleIndicators").offset().top
-  //   },
-  //     'slow');
-  // });
+
+// THIS HELPS THE BURGER MENU COLLAPSE AFTER A LINK IS SELECTED
+  $(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') ) {
+        $(this).collapse('hide');
+    }
+});
 
 
 //   END OF JQUERY DOC-ON-READY
