@@ -59,9 +59,17 @@ color: #fff;
 
 /*JUMBOTRON*/
 .jumbotron {
-  height: 100vh; /*height to 100% of view height*/
-  background: #31b0d5; /*background color to blue*/
-  margin-bottom: 0; /*no bottom margin*/
+  /*height to 100% of view height*/
+  height: 100vh; 
+  /*background color to blue*/
+  /* background: #31b0d5;  */
+  /*no bottom margin*/
+  margin-bottom: 0; 
+
+  background-image: linear-gradient(rgba(42, 82, 109, 0.8), #1a1a1a),
+  url("../img/coding.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   display: flex;
   flex-direction: column;

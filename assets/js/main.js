@@ -16,55 +16,97 @@ $(document).ready(function () {
 
 
 
+// this creates animations first section
+$('.jumbo-Container').animateCss('flipInX', function () {
+  $('.jumbotron-text').css("display", "block").animateCss('fadeIn');
+});
+
+
+
 // SCROLLS DOWN ON BUTTON LICK────────────────────────────────────────────────────
 
-$("#arrowIcon").click(function () {
+  $("#nav-home").click(function () {
+    scrollToHome()
+  })
+
+  $("#down-arrow").click(function () {
     scrollToAbout()
   })
 
   $("#nav-about").click(function () {
-    console.log("hey")
     scrollToAbout()
   })
 
-  $("#nav-contact").click(function () {
-    scrollToContact()
+  $("#nav-exp").click(function () {
+    scrollToExp()
   })
 
-  $("#nav-portfolio").click(function () {
-    scrollToPortfolio()
+  $("#nav-edu").click(function () {
+    scrollToEducation()
   })
 
-  function scrollToPortfolio() {
+  $("#nav-pro").click(function () {
+    scrollToProjects()
+  })
+
+  $("#nav-skills").click(function () {
+    scrollToSkills()
+  })
+
+  $("#nav-con").click(function () {
+    scrollToSkills()
+  })
+
+  function scrollToHome() {
     $('html,body').animate({
-      scrollTop: $("#carouselDiv").offset().top
+      scrollTop: $(".jumbo-Container").offset().top
     },
       'slow');
   }
 
+  function scrollToEducation() {
+    $('html,body').animate({
+      scrollTop: $(".education").offset().top
+    },
+      'slow');
+  }
 
   function scrollToAbout() {
       console.log("HI im scrollToAbout");
     $('html,body').animate({
-      scrollTop: $(".sectionAbout").offset().top
+      scrollTop: $(".about").offset().top
     },
       'slow');
   }
 
-  function scrollToContact() {
+  function scrollToExp() {
     $('html,body').animate({
-      scrollTop: $(".sectThree").offset().top
+      scrollTop: $(".experience").offset().top
+    },
+      'slow');
+  }
+
+  function scrollToProjects() {
+    $('html,body').animate({
+      scrollTop: $(".projects").offset().top
+    },
+      'slow');
+  }
+
+  function scrollToSkills() {
+    $('html,body').animate({
+      scrollTop: $(".skills").offset().top
     },
       'slow');
   }
 
 
-  $("#secondArrow").click(function () {
-    $('html,body').animate({
-      scrollTop: $("#carouselExampleIndicators").offset().top
-    },
-      'slow');
-  });
+  // $("#secondArrow").click(function () {
+  //   $('html,body').animate({
+  //     scrollTop: $("#carouselExampleIndicators").offset().top
+  //   },
+  //     'slow');
+  // });
 
 
 //   END OF JQUERY DOC-ON-READY
